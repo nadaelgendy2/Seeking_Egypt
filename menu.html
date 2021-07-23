@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+   <script>
+  
+   function validation() {
+				var valid = true;
+				if(document.getElementById("email").value==""){
+				alert("Email is empty");
+				document.getElementById("email").focus();
+				valid=false; }
+				else if(document.getElementById("pass").value==""){
+				alert("Password is empty");
+				document.getElementById("pass").focus();
+				valid=false; }
+				else{
+				if(document.getElementById("email").value!="menna@yahoo.com"||document.getElementById("pass").value!="menna"){
+				alert("The entered Eail or Password is wrong");
+				document.getElementById("email").focus();
+				document.getElementById("pass").focus();
+				valid=false; }
+				}
+				if (valid)
+				{
+				var butn=document.getElementById("btn");
+	            butn.style.display = "block";
+                   }
+                  else {
+	                 var butn=document.getElementById("btn");
+                     butn.style.display = "none"; 
+	                }
+				    return valid;
+				}
+				
+  
+	
+	  
+				
+	
+   </script>
+ </head>
+ <body>
+     <div>
+	  <input type="text" placeholder="Enter your email" id="email"/>
+	   <input type="password" placeholder="Enter your password" id="pass"/>
+	   <button type="submit" onclick="return validation()" >Login</button>  
+     </div>
+	 <div style="display:none;" id="btn">
+	    <p>hi</p>
+	    </div>
+ 
+
+ </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Discovering Egypt</title>
+		<meta charset="utf-8">
+		<meta name="description" content="welcome to our website , we will talk about monuments in egypt">
+		<style>
+
+			.navigationmenu 
+			{
+			   overflow:hidden;
+			   background-color:black;
+            }
+			.navigationmenu a 
+			{
+			  float:left;
+			  color:white;
+			  text-align: center;
+			  padding:14px 16px;
+			  text-decoration:none;
+			  font-size:17px;
+			}
+			.navigationmenu a:hover 
+			{
+			  background-color:gray;
+			  color:black;
+			}
+			.active
+			{
+				 
+				 background-color:green;
+				 color:white;
+			}
+			   body, html 
+				{
+				  height: 100%;
+				  margin:0;
+				}
+				.text-block
+				{
+                   width:350px;
+				   height:450px;
+				   position: fixed;
+				   top: 60px;
+				   left: 40px;
+				   background-color:rgba(0, 0, 0,0.5);
+				   color: white;
+				   padding-left: 20px;
+				   padding-right: 20px;
+				   border:2px solid white;
+
+				}
+				h4
+				{	
+					font-family"Times New Roman";
+					font-size:40px;
+					font-style:italic;
+					font-weight:bold;
+					text-align:center;
+					color:white;
+				}
+				p
+				{
+				  font-family"Times New Roman";
+				  font-style:italic;
+				  font-size:25px;
+				  text-align:center;
+				}
+				.responsive{width:100%;height:auto;}
+		</style>
+			
+	</head>
+	<body>
+		
+			<div class="navigationmenu">
+			  <a class="active" >Home</a>
+			  <a href="login page.html" >Login</a>
+			  <a href="register page.html">Register</a>
+			  <a href="information page.html">Info</a>
+			  <a href="about us.html">Admin</a>
+			 
+			</div>
+			
+			<div class="imageslider">
+			  <div class="text-block">
+			      <h4>welcome to our page</h4>
+			      <p> Art is created in a rave. And anything else is the restoration of monuments, and our page will talk in some detail about Egypt, because it contains many wonderful features, and it has produced more monuments that the beggar described than anywhere else in the world. </p>
+		       </div>
+			  <img src="s1.jpg" class="responsive" alt="monuments">
+			 
+			</div>
+			<div class="imageslider">
+			  <div class="text-block">
+				  <h4>welcome to our page</h4>
+			      <p> Art is created in a rave. And anything else is the restoration of monuments, and our page will talk in some detail about Egypt, because it contains many wonderful features, and it has produced more monuments that the beggar described than anywhere else in the world. </p>
+		       </div>
+			  <img src="s2.jpg" class="responsive" alt="monuments">
+			 
+			</div>
+
+			<div class="imageslider">
+			   <div class="text-block">
+			      <h4>welcome to our page</h4>
+			      <p> Art is created in a rave. And anything else is the restoration of monuments, and our page will talk in some detail about Egypt, because it contains many wonderful features, and it has produced more monuments that the beggar described than anywhere else in the world. </p>
+		       </div>
+			  <img src="s3.jpg" class="responsive" alt="monuments">
+			  
+			</div>
+			
+			<div class="imageslider">
+			   <div class="text-block">
+			      <h4>welcome to our page</h4>
+			      <p> Art is created in a rave. And anything else is the restoration of monuments, and our page will talk in some detail about Egypt, because it contains many wonderful features, and it has produced more monuments that the beggar described than anywhere else in the world. </p>
+		       </div>
+			  <img src="s4.jpg" class="responsive" alt="monuments">
+			  
+			</div>
+		
+			<script>
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() 
+				{
+				  var i;
+				  var slides = document.getElementsByClassName("imageslider");
+				  for (i = 0; i < slides.length; i++) 
+				  {
+					slides[i].style.display = "none";  
+				  }
+				  slideIndex++;
+				  if (slideIndex > slides.length) {slideIndex = 1}    
+				  slides[slideIndex-1].style.display = "block";  
+
+				  setTimeout(showSlides, 4000);
+				}
+			</script>	
+	  
+	</body>
+	
+</html>

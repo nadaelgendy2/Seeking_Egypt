@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Discovering Egypt</title>
+			<meta charset="utf-8">
+			<style>
+				body,html
+				{
+					height:100%;
+				    margin:0;
+				}
+				.bg-img
+				{
+				
+					background-image:url("s3.jpg");
+					width:100%;
+					height:100%;
+					background-repeat:no-repeat;
+					background-position:center;
+					background-size:cover;
+					
+				}
+				.box
+				{
+					width:500px;
+					height:500px;
+					background-color:rgba(0,0,0,0.1);
+					border:2px solid black;
+					border-radius:8px;
+					margin:10px;
+					padding:10px;
+					position:fixed;
+					left:50px;
+					top:100px;
+				}
+				h1{text-align:center;font-family:"Times New Roman";font-style:italic;}
+				input,label
+				{
+					margin:10px;
+					padding:10px;
+				}
+				input{border:2px solid black;}
+				label{font-size:23px;color:white;}
+				.button
+				{
+					width:150px;
+					position:fixed;
+					left:200px;
+					top:500px;
+					background-color:green;
+					color:white;
+					margin:10px;
+					padding:10px;
+					font-size:20px;
+					cursor:pointer;
+				}
+                .button:hover{background-color:blue}
+				a{color:white;}
+				a:hover{color:green;}
+			</style>
+			<script>
+				function validate() 
+				{
+					var valid = true;
+					if(document.register.name.value=="")
+					{
+						alert("Name is empty");
+						document.register.name.focus();
+						valid=false; 
+					}
+					else if(document.register.password1.value=="")
+					{
+						alert("Password is empty");
+						document.register.password1.focus();
+						valid=false; 
+					}
+					else if(document.register.password2.value=="")
+					{
+						alert("Password is empty");
+						document.register.password2.focus();
+						valid=false; 
+					}
+					else if(document.register.email.value=="")
+					{
+						alert("Email is empty");
+						document.register.email.focus();
+						valid=false; 
+					}
+					else
+					{
+						if(document.register.password2.value!=document.register.password1.value)
+						{
+							alert("Please make sure that you confirmed the same password!!");
+							document.register.password2.focus();
+							valid=false;
+						}
+						     var regularExpersion = /[0-9]/;
+							 var regularExpersion = /[a-z]/;
+							 var regularExpersion = /[A-Z]/;
+							 var password=regularExpersion.test(document.register.password1.value);
+						  if(password==false) 
+						  {
+							alert("password must contain at least one number ,one lowercase letter and one uppercase letter ! e.g:Md12sn8");
+							document.register.password1.focus();
+							valid= false;
+						  }
+						if(document.register.email.value.indexOf("@")==-1||document.register.email.value.indexOf(".")==-1)
+						{
+							alert("Please Enter valid email, e.g:info@gmail.com");
+							document.register.email.focus();
+							valid=false;
+						}
+					
+					}
+					return valid;
+					
+				} 
+			</script>
+		</head>
+		<body>
+			<div class="bg-img" >
+				<form  name="register" class="box" onsubmit="return validate()"  >
+					<h1>Register Form</h1>
+					<br>
+					<label>Name :</label>
+					<input type="text" name="name" placeholder="Enter name" size="30" >
+					<br>
+					<label>Email :</label>
+					<input type="text" name="email" placeholder="Enter email" size="30">
+					<br>
+					<label>Password :</label>
+					<input type="password" name="password1" maxlength="8" placeholder="Enter password" size="25" >
+					<br>
+					<label>Confirm Password :</label>
+					<input type="password" name="password2" maxlength="8" placeholder="Confirm password" size="25" >
+					<br>
+					<button type="submit" class="button" formaction="home page.html" >Register</button>
+					<br><br><br><br><br><br><br>
+				    <a href="home page.html" > Back to Home</a>
+				</form>
+			</div>
+			
+		</body>
+		
+</html> 

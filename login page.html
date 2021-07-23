@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Discovering Egypt</title>
+			<meta charset="UTF-8"> 
+			<style>
+				body,html
+				{
+					height:100%;
+					margin:0;
+				}
+				
+				.bg-img
+				{
+								
+					background-image:url("M1.jpg");
+					width:100%;
+					height:100%;
+					background-repeat:no-repeat;
+					background-position:center;
+					background-size:cover;
+									
+				}
+				
+				.box
+				{
+					width:550px;
+					height:695px;
+					background-color:rgba(0,0,0,0.1);
+					border:2px solid white;
+					border-radius:8px;
+					padding:10px;
+					position:fixed;
+					margin-right:500px;
+					margin-left:500px;
+					margin-top:10px;
+					margin-bottom:10px;
+				}
+				input[type="text"], input[type="password"]{
+				   border-radius:4px;
+				   padding-top:10px;
+				   padding-bottom:10px;
+				   padding-left:2px;
+				   width:100%;
+				}
+				label{
+					font-size: 20px;
+					font-weight: bold;
+					font-variant: normal;
+					font-family:sans-serif;
+					color:white;
+				}
+				.avatar{
+				  padding-left:150px;
+				  padding-right:150px;
+				  margin:auto;
+				  width: 200px;
+				  height: 200px;
+				  border-radius: 50%;
+
+				}
+				#btn{
+				  border-color:#CC9933; 
+				  background-color:	#F5F5F5; 
+				  border-radius:8px;
+				  padding:15px 4px 15px 4px;
+				  margin:auto;
+				  width:20%;
+				  font-size:20px;
+				  margin-left:200px;
+				  margin-right:100px;
+				}
+				#btn:hover {
+				    border-color:#080808; 
+ 					background-color:#CC9933; 
+				}
+				a :hover{
+				border-color:red;
+				}
+				h1{color:white}
+				a{color:white}
+				.register{
+				color:blue;
+				}
+			</style>
+			<script>
+				function validation()
+				{
+					var valid = true;
+					if(document.loginForm.email.value==""){
+					alert("Email is empty");
+					document.loginForm.email.focus();
+					valid=false; }
+					else if(document.loginForm.pass.value==""){
+					alert("Password is empty");
+					document.loginForm.pass.focus();
+					valid=false; }
+					else
+					{
+						var lnum = /[0-9]/;
+						var lnum = /[a-z]/;
+						var lnum = /[A-Z]/;
+						var password=lnum.test(document.loginForm.pass.value);
+						if(password==false)
+						{
+						   alert("password must contain at least one number ,one lowercase letter and one uppercase letter ! e.g:Md12sn8");
+						   document.loginForm.pass.focus();
+							valid= false;
+						}
+						if(document.loginForm.email.value.indexOf("@")==-1||document.loginForm.email.value.indexOf(".")==-1){
+							alert("Please Enter valid email, e.g:info@yahoo.com");
+							document.loginForm.email.focus();
+							valid=false; }
+					}
+					return valid;
+				}
+			</script>
+	</head>
+	<body>
+		<div  class="bg-img" >
+
+				<form name="loginForm" class="box" onsubmit="return validation()"> <!--specifies where to send the form-data when a form is submitted-->
+				    <img src="avatar.jpg" class="avatar" /><br><br>
+					<header> <h1> Welcome Here..</h1></header>
+					<!-- defines a label for several elements-->
+					<label>Email : <label> <br>
+					<input type="text" id="E1" name="email"/><br><br><br>
+					<label>Password : </label> <br>
+					<input  type="password"  id="P1" name="pass" /><br>
+					<input type="checkbox" name="remember" />Remember me<br>
+					<p>New here?<a href="register page.html" class="register">create an account</a></p><br>
+					<button type="submit" id="btn" formaction="information page.html">Login</button><br><br> <!--The onsubmit event occurs when a form is submitted -->
+
+					<footer> <a href="home page.html"  > <- Back to home</a> </footer>
+				</form>
+
+		</div>
+	</body>      
+</html>
